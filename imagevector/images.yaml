@@ -64,20 +64,50 @@ images:
   repository: registry.k8s.io/provider-os/openstack-cloud-controller-manager
   tag: v1.34.1
   labels:
-    - name: gardener.cloud/cve-categorisation
-      value:
-        network_exposure: protected
-        authentication_enforced: false
-        user_interaction: gardener-operator
-        confidentiality_requirement: high
-        integrity_requirement: high
-        availability_requirement: low
-      signing: false
-  targetVersion: '>= 1.34'
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: gardener-operator
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: 1.34.x
+- name: cloud-controller-manager
+  sourceRepository: github.com/kubernetes/cloud-provider-openstack
+  repository: registry.k8s.io/provider-os/openstack-cloud-controller-manager
+  tag: v1.35.0
+  labels:
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: gardener-operator
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: 1.35.x
+- name: cloud-controller-manager
+  sourceRepository: github.com/kubernetes/cloud-provider-openstack
+  repository: registry.k8s.io/provider-os/openstack-cloud-controller-manager
+  tag: v1.36.0
+  labels:
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: gardener-operator
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: '>= 1.36'
 - name: csi-attacher
   sourceRepository: github.com/kubernetes-csi/external-attacher
   repository: registry.k8s.io/sig-storage/csi-attacher
-  tag: v4.10.0
+  tag: v4.12.0
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -153,16 +183,46 @@ images:
   repository: registry.k8s.io/provider-os/cinder-csi-plugin
   tag: v1.34.1
   labels:
-    - name: gardener.cloud/cve-categorisation
-      value:
-        network_exposure: protected
-        authentication_enforced: false
-        user_interaction: end-user
-        confidentiality_requirement: high
-        integrity_requirement: high
-        availability_requirement: low
-      signing: false
-  targetVersion: '>= 1.34'
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: end-user
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: 1.34.x
+- name: csi-driver-cinder
+  sourceRepository: github.com/kubernetes/cloud-provider-openstack
+  repository: registry.k8s.io/provider-os/cinder-csi-plugin
+  tag: v1.35.0
+  labels:
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: end-user
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: 1.35.x
+- name: csi-driver-cinder
+  sourceRepository: github.com/kubernetes/cloud-provider-openstack
+  repository: registry.k8s.io/provider-os/cinder-csi-plugin
+  tag: v1.36.0
+  labels:
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: end-user
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: '>= 1.36'
 - name: csi-driver-manila
   sourceRepository: github.com/kubernetes/cloud-provider-openstack
   repository: registry.k8s.io/provider-os/manila-csi-plugin
@@ -228,20 +288,50 @@ images:
   repository: registry.k8s.io/provider-os/manila-csi-plugin
   tag: v1.34.1
   labels:
-    - name: gardener.cloud/cve-categorisation
-      value:
-        network_exposure: protected
-        authentication_enforced: false
-        user_interaction: end-user
-        confidentiality_requirement: high
-        integrity_requirement: high
-        availability_requirement: low
-      signing: false
-  targetVersion: '>= 1.34'
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: end-user
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: 1.34.x
+- name: csi-driver-manila
+  sourceRepository: github.com/kubernetes/cloud-provider-openstack
+  repository: registry.k8s.io/provider-os/manila-csi-plugin
+  tag: v1.35.0
+  labels:
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: end-user
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: 1.35.x
+- name: csi-driver-manila
+  sourceRepository: github.com/kubernetes/cloud-provider-openstack
+  repository: registry.k8s.io/provider-os/manila-csi-plugin
+  tag: v1.36.0
+  labels:
+  - name: gardener.cloud/cve-categorisation
+    value:
+      network_exposure: protected
+      authentication_enforced: false
+      user_interaction: end-user
+      confidentiality_requirement: high
+      integrity_requirement: high
+      availability_requirement: low
+    signing: false
+  targetVersion: '>= 1.36'
 - name: csi-driver-nfs
   sourceRepository: github.com/kubernetes-csi/csi-driver-nfs
   repository: registry.k8s.io/sig-storage/nfsplugin
-  tag: v4.12.1
+  tag: v4.13.4
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -255,7 +345,7 @@ images:
 - name: csi-liveness-probe
   sourceRepository: github.com/kubernetes-csi/livenessprobe
   repository: registry.k8s.io/sig-storage/livenessprobe
-  tag: v2.17.0
+  tag: v2.19.0
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -269,7 +359,7 @@ images:
 - name: csi-node-driver-registrar
   sourceRepository: github.com/kubernetes-csi/node-driver-registrar
   repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-  tag: v2.15.0
+  tag: v2.17.0
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -297,7 +387,7 @@ images:
 - name: csi-provisioner
   sourceRepository: github.com/kubernetes-csi/external-provisioner
   repository: registry.k8s.io/sig-storage/csi-provisioner
-  tag: v6.1.0
+  tag: v6.3.0
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -326,7 +416,7 @@ images:
 - name: csi-resizer
   sourceRepository: github.com/kubernetes-csi/external-resizer
   repository: registry.k8s.io/sig-storage/csi-resizer
-  tag: v2.0.0
+  tag: v2.2.1
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -341,7 +431,7 @@ images:
 - name: csi-snapshot-controller
   sourceRepository: github.com/kubernetes-csi/external-snapshotter
   repository: registry.k8s.io/sig-storage/snapshot-controller
-  tag: v8.4.0
+  tag: v8.6.0
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -355,7 +445,7 @@ images:
 - name: csi-snapshotter
   sourceRepository: github.com/kubernetes-csi/external-snapshotter
   repository: registry.k8s.io/sig-storage/csi-snapshotter
-  tag: v8.4.0
+  tag: v8.6.0
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
@@ -369,7 +459,7 @@ images:
 - name: machine-controller-manager-provider-openstack
   sourceRepository: github.com/gardener/machine-controller-manager-provider-openstack
   repository: europe-docker.pkg.dev/gardener-project/releases/gardener/machine-controller-manager-provider-openstack
-  tag: "v0.25.0"
+  tag: v0.27.1
   labels:
   - name: gardener.cloud/cve-categorisation
     value:
